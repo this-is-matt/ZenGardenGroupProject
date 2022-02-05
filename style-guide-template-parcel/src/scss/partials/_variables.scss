@@ -1,0 +1,16 @@
+// color palette - these colors will be the color swatches of the Colors section
+
+$color-1: #000000; // black
+$color-2: #025c50; // Dark teal
+$color-3: #85c2b3; // Teal
+$color-4: #e8e8e8; // Off White
+$color-5: #ffffff; // white
+
+// additional colors
+
+$success: #025c50; // Brown
+$alert: $color-3; // Teal
+
+// fonts
+$primary-font: 'ubuntu', sans-serif;
+$secondary-font: 'ubuntu', sans-serif;
