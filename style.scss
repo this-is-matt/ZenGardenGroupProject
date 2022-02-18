@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 // Colors
-$transparent-bg: rgba(0,0,0,.5);
+$transparent-bg: rgba(0,0,0,.7);
 $color-black: #000000;
 $color-teal: #025c50; 
 $color-mint: #85c2b3; 
@@ -29,6 +29,7 @@ footer {
     border-radius: 10px;
     padding: 1em;
     margin: 1em 0;
+    backdrop-filter: blur(5px);
 }
 
 header {
@@ -60,17 +61,50 @@ header > h1 {
 }
 
 h3 {
+    font-size: 1.5em;
     margin-bottom: 2.5em;
+    margin-top: 0;
 }
 
-// Heading divider rectangle things
-.explanation > h3::after {
-    font-size: .5em;
+// Divider
+.preamble > h3::after,
+.explanation > h3::after,
+.participation > h3::after,
+.benefits > h3::after,
+.requirements > h3::after {
+    font-size: .3em;
     content:"";
     width: 0;
     height: 0;
-    border-left: 80px solid $color-mint;
+    border-left: 70px solid $color-mint;
     position: relative;
     top: 30px;
-    right: 194px;
+}
+
+.preamble > h3::after {
+    right: 290px;
+}
+
+.explanation > h3::after {
+    right: 247px;
+}
+
+.participation > h3::after {
+    right: 137px;
+}
+
+.benefits > h3::after {
+    right: 88px;
+}
+
+.requirements > h3::after {
+    right: 150px;
+}
+
+@media (min-width: 1000px) {
+    body {
+        margin: 0 auto;
+        max-width: 1000px;
+        margin-bottom: 15rem;
+    }
 }

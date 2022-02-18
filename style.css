@@ -16,10 +16,11 @@ header,
 .design-archives,
 .zen-resources,
 footer {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   padding: 1em;
   margin: 1em 0;
+  backdrop-filter: blur(5px);
 }
 
 header {
@@ -50,18 +51,51 @@ header > h1 {
 }
 
 h3 {
+  font-size: 1.5em;
   margin-bottom: 2.5em;
+  margin-top: 0;
 }
 
-.explanation > h3::after {
-  font-size: 0.5em;
+.preamble > h3::after,
+.explanation > h3::after,
+.participation > h3::after,
+.benefits > h3::after,
+.requirements > h3::after {
+  font-size: 0.3em;
   content: "";
   width: 0;
   height: 0;
-  border-left: 80px solid #85c2b3;
+  border-left: 70px solid #85c2b3;
   position: relative;
   top: 30px;
-  right: 194px;
+}
+
+.preamble > h3::after {
+  right: 290px;
+}
+
+.explanation > h3::after {
+  right: 247px;
+}
+
+.participation > h3::after {
+  right: 137px;
+}
+
+.benefits > h3::after {
+  right: 88px;
+}
+
+.requirements > h3::after {
+  right: 150px;
+}
+
+@media (min-width: 1000px) {
+  body {
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-bottom: 15rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
