@@ -132,7 +132,6 @@ h3 {
     grid-template-columns: 2fr 1fr;
     column-gap: 1rem;
   }
-
   #zen-intro > header {
     margin: 0.6rem 0;
     grid-column: 1/3;
