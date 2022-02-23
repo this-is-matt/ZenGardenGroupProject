@@ -44,6 +44,10 @@ footer {
 .zen-resources > ul > li > a, .zen-resources > ul > li > a:visited {
   color: white;
   text-decoration: none;
+  padding: 1em 5em;
+}
+.zen-resources > ul > li > a:hover {
+  text-decoration: underline;
 }
 
 header {
