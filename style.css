@@ -193,6 +193,7 @@ h3 {
     bottom: 0;
     animation: sway 10s linear infinite;
     transform-origin: bottom;
+    pointer-events: none;
   }
   @keyframes sway {
     0% {
