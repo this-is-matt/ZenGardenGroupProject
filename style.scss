@@ -182,6 +182,47 @@ h3 {
 }
 
 @media (min-width: 1125px) {
+    html {
+        overflow-x: hidden;
+        &::before {
+            // BIRDS
+            margin-top: -15rem;
+            display: block;
+            content: '';
+            background-image: url(assets/images/birds.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            opacity: 80%;
+            height: 200px;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            animation: float 4s linear infinite;
+            transform-origin: bottom;
+        }
+        &::after {
+            // TREES
+            display: block;
+            content: '';
+            background-image: url(assets/images/sticky-test.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            opacity: 80%;
+            height: 400px;
+            width: 100%;
+            position: sticky;
+            bottom: 0;
+            animation: sway 10s linear infinite;
+            transform-origin: bottom;
+        }
+
+        @keyframes sway {
+            0% { transform: skewX(-2deg) };
+            50% { transform: skewX(2deg) };
+            100% { transform: skewX(-2deg) };
+        }
+    }
+
     body {
         margin: 0 auto;
         max-width: 1100px;
@@ -216,6 +257,26 @@ h3 {
         margin: 0.6rem 0;
         grid-column: 1;
         grid-row: 4;
+
+        // &::before {
+        //     display: block;
+        //     content: ' ';
+        //     background-image: url(assets/images/birds.svg);
+        //     background-repeat: no-repeat;
+        //     background-size: 100px 100px;
+        //     height: 100px;
+        //     width: 100px;
+        //     position: absolute;
+        //     right: 800px;
+        //     top: -300px;
+        //     animation: float 5s linear infinite;
+        // }
+
+        @keyframes float {
+            0% { top: -10px };
+            50% { top: 10px };
+            100% { top: -10px };
+        }
     }
 
     footer {
