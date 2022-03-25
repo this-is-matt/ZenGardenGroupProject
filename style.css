@@ -39,6 +39,7 @@ a:hover {
 }
 .zen-resources > ul {
   padding-left: 0;
+  margin-top: 0;
 }
 .zen-resources > ul > li {
   list-style: none;
@@ -156,8 +157,58 @@ h3 {
   display: flex;
   flex-direction: column;
 }
+.sidebar > .wrapper > .design-archives {
+  order: -1;
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0);
+}
+.sidebar > .wrapper > .design-archives > h3 {
+  display: none;
+}
+.sidebar > .wrapper > .design-selection h3 {
+  opacity: 0;
+  margin-bottom: 0;
+}
 
 .design-archives {
+  order: 1;
+  margin-bottom: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+.design-archives > nav[role=navigation] > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5em;
+  margin: 0;
+}
+.design-archives > nav[role=navigation] > ul > .next, .design-archives > nav[role=navigation] > ul > .viewall {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  width: 48%;
+  height: 50%;
+  border-radius: 10px;
+  margin: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-radius 100ms ease-in;
+}
+.design-archives > nav[role=navigation] > ul > .next:hover, .design-archives > nav[role=navigation] > ul > .viewall:hover {
+  border-radius: 3px;
+}
+.design-archives > nav[role=navigation] > ul > .next > a, .design-archives > nav[role=navigation] > ul > .next > a:visited, .design-archives > nav[role=navigation] > ul > .viewall > a, .design-archives > nav[role=navigation] > ul > .viewall > a:visited {
+  padding: 0.5em;
+  color: white;
+  transition: transform 100ms ease-in;
+}
+.design-archives > nav[role=navigation] > ul > .next > a:hover, .design-archives > nav[role=navigation] > ul > .next > a:visited:hover, .design-archives > nav[role=navigation] > ul > .viewall > a:hover, .design-archives > nav[role=navigation] > ul > .viewall > a:visited:hover {
+  text-decoration: none;
+  transform: scale(0.95);
+}
+.design-archives > nav[role=navigation] > ul .next {
   order: 1;
 }
 
@@ -166,7 +217,7 @@ h3 {
     overflow-x: hidden;
   }
   html::before {
-    margin-top: -15rem;
+    margin-top: -12rem;
     display: block;
     content: "";
     background-image: url(assets/images/birds.svg);
@@ -177,8 +228,19 @@ h3 {
     width: 100%;
     position: sticky;
     top: 0;
-    animation: float 4s linear infinite;
+    animation: float 5s linear infinite;
     transform-origin: bottom;
+  }
+  @keyframes float {
+    0% {
+      top: -10px;
+    }
+    50% {
+      top: 10px;
+    }
+    100% {
+      top: -10px;
+    }
   }
   html::after {
     display: block;
@@ -186,7 +248,7 @@ h3 {
     background-image: url(assets/images/sticky-test.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    opacity: 80%;
+    opacity: 70%;
     height: 400px;
     width: 100%;
     position: sticky;
@@ -241,22 +303,11 @@ h3 {
     grid-column: 1;
     grid-row: 4;
   }
-  @keyframes float {
-    0% {
-      top: -10px;
-    }
-    50% {
-      top: 10px;
-    }
-    100% {
-      top: -10px;
-    }
-  }
 
   footer {
     position: relative;
     left: 46.2rem;
-    top: -44rem;
+    top: -55rem;
     width: 20.8rem;
     display: flex;
     justify-content: space-between;
