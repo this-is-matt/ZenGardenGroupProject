@@ -22,6 +22,11 @@ footer {
   backdrop-filter: blur(8px);
 }
 
+.summary {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 a {
   color: #85c2b3;
   text-decoration: none;
@@ -303,7 +308,7 @@ h3 {
   body {
     margin: 0 auto;
     max-width: 1100px;
-    margin-bottom: 15rem;
+    margin-bottom: -15rem;
   }
 
   .page-wrapper {
