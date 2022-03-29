@@ -220,26 +220,57 @@ h3 {
     margin-top: -12rem;
     display: block;
     content: "";
-    background-image: url(assets/images/birds.svg);
+    background-image: url(assets/images/bird-left.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     opacity: 80%;
     height: 200px;
     width: 100%;
     position: sticky;
-    top: 0;
-    animation: float 5s linear infinite;
+    animation: float 10s linear infinite;
     transform-origin: bottom;
+    z-index: 0;
   }
   @keyframes float {
     0% {
-      top: -10px;
+      top: -5px;
+      transform: translate(10px);
+    }
+    13% {
+      top: 5px;
+      transform: translate(17px);
+    }
+    26% {
+      top: -5px;
+      transform: translate(24px);
+    }
+    38% {
+      top: 5px;
+      transform: translate(30px);
     }
     50% {
-      top: 10px;
+      top: -5px;
+      transform: translate(37px);
+    }
+    50% {
+      top: -5px;
+      transform: translate(37px);
+    }
+    63% {
+      top: 5px;
+      transform: translate(30px);
+    }
+    75% {
+      top: -5px;
+      transform: translate(24px);
+    }
+    87% {
+      top: 5px;
+      transform: translate(17px);
     }
     100% {
-      top: -10px;
+      top: -5px;
+      transform: translate(10px);
     }
   }
   html::after {
