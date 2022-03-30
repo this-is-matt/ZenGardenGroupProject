@@ -321,6 +321,7 @@ h3 {
          animation: sway 10s linear infinite;
          transform-origin: bottom;
          pointer-events: none;
+         z-index: 101;
       }
 
       @keyframes sway {
@@ -375,7 +376,7 @@ h3 {
       justify-content: space-between;
       z-index: 100; // fixes links being unclickable
 
-      &  >  * {
+      & > * {
          text-indent: -9999em; // Hide text
          overflow: hidden;
          width: 30px;
