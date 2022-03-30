@@ -31,6 +31,11 @@ footer {
    backdrop-filter: blur($blur);
 }
 
+.summary {
+   padding-top: 0;
+   padding-bottom: 0;
+}
+
 a {
    color: $color-mint;
    text-decoration: none;
@@ -316,6 +321,7 @@ h3 {
          animation: sway 10s linear infinite;
          transform-origin: bottom;
          pointer-events: none;
+         z-index: 101;
       }
 
       @keyframes sway {
@@ -328,7 +334,7 @@ h3 {
    body {
       margin: 0 auto;
       max-width: 1100px;
-      margin-bottom: 15rem;
+      margin-bottom: -15rem;
    }
 
    .page-wrapper {
@@ -370,7 +376,7 @@ h3 {
       justify-content: space-between;
       z-index: 100; // fixes links being unclickable
 
-      &  >  * {
+      & > * {
          text-indent: -9999em; // Hide text
          overflow: hidden;
          width: 30px;
@@ -385,23 +391,23 @@ h3 {
          }
       }
 
-      &  >  :nth-child(1) {
+      & > :nth-child(1) {
          background-image: url(assets/icons/icon-html.png);
       }
 
-      &  >  :nth-child(2) {
+      & > :nth-child(2) {
          background-image: url(assets/icons/icon-css.png);
       }
 
-      &  >  :nth-child(3) {
+      & > :nth-child(3) {
          background-image: url(assets/icons/icon-cc.png);
       }
 
-      &  >  :nth-child(4) {
+      & > :nth-child(4) {
          background-image: url(assets/icons/icon-a11y.png);
       }
 
-      &  >  :nth-child(5) {
+      & > :nth-child(5) {
          background-image: url(assets/icons/icon-github.png);
       }
    }
